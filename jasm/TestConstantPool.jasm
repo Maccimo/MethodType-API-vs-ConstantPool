@@ -1,0 +1,34 @@
+// main/TestConstantPool.jasm
+/**
+ *
+ * You need <a href="https://wiki.openjdk.java.net/display/CodeTools/asmtools">asmtools</a> to assemble this example.
+ *
+ * To assemble run:
+ * <code>
+ *		java -jar asmtools.jar jasm -g TestConstantPool.jasm
+ * </code>
+ *
+ */
+package  main;
+
+super public class TestConstantPool
+	version 52:0
+{
+  public Method "<init>":"()V"
+	stack 1 locals 1
+  {
+		aload_0;
+		invokespecial	Method java/lang/Object."<init>":"()V";
+		return;	
+  }
+
+  public static varargs Method main:"([Ljava/lang/String;)V"
+	stack 2 locals 1
+  {
+		getstatic	Field java/lang/System.out:"Ljava/io/PrintStream;";
+		ldc MethodType "()Lfoo/Foo$Bar;";
+		invokevirtual	Method java/io/PrintStream.println:"(Ljava/lang/Object;)V";
+		return;
+	
+  }
+} // end Class TestConstantPool
